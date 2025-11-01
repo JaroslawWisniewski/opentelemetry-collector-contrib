@@ -3,7 +3,7 @@ dist:
   description: OtelCol Contrib with Dynatrace
   output_path: ./dist
   version: ${{ github.run_number }}
-  
+
 exporters:
   - gomod: go.opentelemetry.io/collector/exporter/debugexporter v0.137.0
   - gomod: go.opentelemetry.io/collector/exporter/otlphttpexporter v0.137.0
@@ -18,3 +18,8 @@ receivers:
 
 connectors:
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/connector/routingconnector v0.137.0
+
+gomod:
+  replace:
+    # Override the receiver to use the branch dynatrace-pull-receiver-v0
+    - github.com/macrimora/opentelemetry-collector-contrib => github.com/macrimora/opentelemetry-collector-contrib dynatrace-pull-receiver-v0
