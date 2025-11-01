@@ -14,12 +14,12 @@ processors:
 
 receivers:
   - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver v0.137.0
-  - gomod: github.com/macrimora/opentelemetry-collector-contrib/receiver/dynatracereceiver
+  - gomod: github.com/macrimora/opentelemetry-collector-contrib/receiver/dynatracereceiver v0.0.0-20250730103153-1f46f6fc57e4
 
 connectors:
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/connector/routingconnector v0.137.0
 
-gomod:
-  replace:
+#gomod:
+ #replace:
     # Override the receiver to use the branch dynatrace-pull-receiver-v0
-    - github.com/macrimora/opentelemetry-collector-contrib => github.com/macrimora/opentelemetry-collector-contrib@dynatrace-pull-receiver-v0
+    #- github.com/macrimora/opentelemetry-collector-contrib => github.com/macrimora/opentelemetry-collector-contrib@dynatrace-pull-receiver-v0
