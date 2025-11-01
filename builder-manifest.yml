@@ -1,0 +1,21 @@
+dist:
+  name: otelcolcontrib-with-dynatrace
+  description: OtelCol Contrib with Dynatrace
+  output_path: ./dist
+  version: ${{ github.run_number }}
+  
+exporters:
+  - gomod: go.opentelemetry.io/collector/exporter/debugexporter v0.137.0
+  - gomod: go.opentelemetry.io/collector/exporter/otlphttpexporter v0.137.0
+
+processors:
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/filterprocessor v0.137.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor v0.137.0
+
+receivers:
+  - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver v0.137.0
+  - gomod: github.com/solarekm/observability/Dynatrace-opentelemetry-collector-contrib/receiver/dynatracereceiver v0.0.0-20251016151306-e17d12273c2d
+  - gomod: github.com/macrimora/opentelemetry-collector-contrib/receiver/dynatracereceiver
+
+connectors:
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/connector/routingconnector v0.137.0
