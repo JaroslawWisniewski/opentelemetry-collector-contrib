@@ -34,6 +34,7 @@ jobs:
       
       - name: Build from config
         run: | 
+          mkdir ./dist
           ./ocb --config ./builder-manifest.yaml
           pwd && ls -la
           tree
