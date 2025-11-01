@@ -34,7 +34,6 @@ jobs:
       
       - name: Build from config
         run: | 
-          # ./ocb --config ./cmd/otelcontribcol/builder-config.yaml
           ./ocb --config ./builder-manifest.yaml
           pwd && ls -la
           tree
