@@ -35,9 +35,9 @@ jobs:
       - name: Build from config
         run: | 
           # mkdir ./dist
-          go list -m -versions github.com/macrimora/opentelemetry-collector-contrib@dynatrace-pull-receiver-v0
-          go get github.com/macrimora/opentelemetry-collector-contrib@dynatrace-pull-receiver-v0
-          go list -m github.com/macrimora/opentelemetry-collector-contrib
+          # go list -m -versions github.com/macrimora/opentelemetry-collector-contrib@dynatrace-pull-receiver-v0
+          # go get github.com/macrimora/opentelemetry-collector-contrib@dynatrace-pull-receiver-v0
+          # go list -m github.com/macrimora/opentelemetry-collector-contrib
           ./ocb --config ./builder-manifest.yml
           pwd && ls -la
           tree
