@@ -38,6 +38,7 @@ jobs:
           # go list -m -versions github.com/macrimora/opentelemetry-collector-contrib@dynatrace-pull-receiver-v0
           # go get github.com/macrimora/opentelemetry-collector-contrib@dynatrace-pull-receiver-v0
           # go list -m github.com/macrimora/opentelemetry-collector-contrib
-          ./ocb --config ./builder-manifest.yml
+          ./ocb --config ./cmd/otelcontribcol/builder-config.yaml
+          #./ocb --config ./builder-manifest.yml
           pwd && ls -la
           tree
