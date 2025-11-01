@@ -30,3 +30,10 @@ jobs:
 
       - name: Install otelcol-builder by go
         run: go install go.opentelemetry.io/collector/cmd/builder@latest
+
+      
+      - name: Build from config
+        run: | 
+          ./ocb --config ./cmd/otelcontribcol/builder-config.yaml
+          pwd && ls -la
+          tree
