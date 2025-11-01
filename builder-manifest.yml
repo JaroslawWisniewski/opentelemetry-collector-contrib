@@ -22,4 +22,4 @@ connectors:
 gomod:
   replace:
     # Override the receiver to use the branch dynatrace-pull-receiver-v0
-    - github.com/macrimora/opentelemetry-collector-contrib => github.com/macrimora/opentelemetry-collector-contrib dynatrace-pull-receiver-v0
+    - github.com/macrimora/opentelemetry-collector-contrib => github.com/macrimora/opentelemetry-collector-contrib@dynatrace-pull-receiver-v0
